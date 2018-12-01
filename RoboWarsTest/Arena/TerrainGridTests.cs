@@ -18,7 +18,7 @@ namespace RoboWars.Arena.Tests
         {
             GridPoint originalPosition = new GridPoint(0, 0);
 
-            var newPosition = _target.Explore(originalPosition, CompassDirection.NORTH);
+            var newPosition = _target.MoveFrom(originalPosition, CompassDirection.NORTH);
 
             Assert.IsTrue(newPosition.X == originalPosition.X);
             Assert.IsTrue(newPosition.Y == originalPosition.Y + 1);
@@ -29,7 +29,7 @@ namespace RoboWars.Arena.Tests
         {
             GridPoint originalPosition = new GridPoint(0, 4);
 
-            var newPosition = _target.Explore(originalPosition, CompassDirection.NORTH);
+            var newPosition = _target.MoveFrom(originalPosition, CompassDirection.NORTH);
 
             Assert.IsTrue(newPosition.X == originalPosition.X);
             Assert.IsTrue(newPosition.Y == originalPosition.Y);
@@ -40,7 +40,7 @@ namespace RoboWars.Arena.Tests
         {
             GridPoint originalPosition = new GridPoint(2, 2);
 
-            var newPosition = _target.Explore(originalPosition, CompassDirection.SOUTH);
+            var newPosition = _target.MoveFrom(originalPosition, CompassDirection.SOUTH);
 
             Assert.IsTrue(newPosition.X == originalPosition.X);
             Assert.IsTrue(newPosition.Y == originalPosition.Y - 1);
@@ -51,7 +51,7 @@ namespace RoboWars.Arena.Tests
         {
             GridPoint originalPosition = new GridPoint(0, 0);
 
-            var newPosition = _target.Explore(originalPosition, CompassDirection.SOUTH);
+            var newPosition = _target.MoveFrom(originalPosition, CompassDirection.SOUTH);
 
             Assert.IsTrue(newPosition.X == originalPosition.X);
             Assert.IsTrue(newPosition.Y == originalPosition.Y);
@@ -62,7 +62,7 @@ namespace RoboWars.Arena.Tests
         {
             GridPoint originalPosition = new GridPoint(2, 2);
 
-            var newPosition = _target.Explore(originalPosition, CompassDirection.EAST);
+            var newPosition = _target.MoveFrom(originalPosition, CompassDirection.EAST);
 
             Assert.IsTrue(newPosition.X == originalPosition.X + 1);
             Assert.IsTrue(newPosition.Y == originalPosition.Y);
@@ -73,7 +73,7 @@ namespace RoboWars.Arena.Tests
         {
             GridPoint originalPosition = new GridPoint(4, 0);
 
-            var newPosition = _target.Explore(originalPosition, CompassDirection.EAST);
+            var newPosition = _target.MoveFrom(originalPosition, CompassDirection.EAST);
 
             Assert.IsTrue(newPosition.X == originalPosition.X);
             Assert.IsTrue(newPosition.Y == originalPosition.Y);
@@ -84,7 +84,7 @@ namespace RoboWars.Arena.Tests
         {
             GridPoint originalPosition = new GridPoint(2, 2);
 
-            var newPosition = _target.Explore(originalPosition, CompassDirection.WEST);
+            var newPosition = _target.MoveFrom(originalPosition, CompassDirection.WEST);
 
             Assert.IsTrue(newPosition.X == originalPosition.X - 1);
             Assert.IsTrue(newPosition.Y == originalPosition.Y);
@@ -95,7 +95,7 @@ namespace RoboWars.Arena.Tests
         {
             GridPoint originalPosition = new GridPoint(0, 3);
 
-            var newPosition = _target.Explore(originalPosition, CompassDirection.WEST);
+            var newPosition = _target.MoveFrom(originalPosition, CompassDirection.WEST);
 
             Assert.IsTrue(newPosition.X == originalPosition.X);
             Assert.IsTrue(newPosition.Y == originalPosition.Y);

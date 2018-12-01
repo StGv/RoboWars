@@ -18,7 +18,7 @@
             return position.X < MaxX && position.Y < MaxY;
         }
 
-        public GridPoint Explore(GridPoint fromPosition, CompassDirection facingDirection)
+        public GridPoint MoveFrom(GridPoint fromPosition, CompassDirection facingDirection)
         {
             switch (facingDirection)
             {

@@ -1,6 +1,5 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using RoboWars.Arena;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 
 namespace RoboWars.Arena.Tests
 {

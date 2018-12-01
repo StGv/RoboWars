@@ -33,7 +33,7 @@ namespace RoboWars
 
         public void MoveForward()
         {
-            CurrentGridPosition = _arenaTerrainGrid.Explore(CurrentGridPosition, CurrentCompassOrientation);
+            CurrentGridPosition = _arenaTerrainGrid.MoveFrom(CurrentGridPosition, CurrentCompassOrientation);
         }
 
         public void TurnLeft()

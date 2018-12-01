@@ -28,7 +28,7 @@ namespace RoboWars.Tests
             GridPoint originalPosition = new GridPoint(0, 0);
             CompassDirection originalRobotDirection = CompassDirection.NORTH;
             terrainGrid.Setup(x => x.IsInTerrainLimits(originalPosition)).Returns(true);
-            terrainGrid.Setup(x => x.Explore(originalPosition, originalRobotDirection)).Returns(new GridPoint(0, 1));
+            terrainGrid.Setup(x => x.MoveFrom(originalPosition, originalRobotDirection)).Returns(new GridPoint(0, 1));
             robot = new Robot(terrainGrid.Object, originalPosition, originalRobotDirection);
 
             robot.MoveForward();
@@ -44,7 +44,7 @@ namespace RoboWars.Tests
             GridPoint originalPosition = new GridPoint(2, 2);
             CompassDirection originalRobotDirection = CompassDirection.EAST;
             terrainGrid.Setup(x => x.IsInTerrainLimits(originalPosition)).Returns(true);
-            terrainGrid.Setup(x => x.Explore(originalPosition, originalRobotDirection)).Returns(new GridPoint(3, 2));
+            terrainGrid.Setup(x => x.MoveFrom(originalPosition, originalRobotDirection)).Returns(new GridPoint(3, 2));
             robot = new Robot(terrainGrid.Object, originalPosition, originalRobotDirection);
 
             robot.MoveForward();
@@ -60,7 +60,7 @@ namespace RoboWars.Tests
             GridPoint originalPosition = new GridPoint(2, 2);
             CompassDirection originalRobotDirection = CompassDirection.SOUTH;
             terrainGrid.Setup(x => x.IsInTerrainLimits(originalPosition)).Returns(true);
-            terrainGrid.Setup(x => x.Explore(originalPosition, originalRobotDirection)).Returns(new GridPoint(2, 1));
+            terrainGrid.Setup(x => x.MoveFrom(originalPosition, originalRobotDirection)).Returns(new GridPoint(2, 1));
             robot = new Robot(terrainGrid.Object, originalPosition, originalRobotDirection);
 
             robot.MoveForward();
@@ -76,7 +76,7 @@ namespace RoboWars.Tests
             GridPoint originalPosition = new GridPoint(2, 2);
             CompassDirection originalRobotDirection = CompassDirection.WEST;
             terrainGrid.Setup(x => x.IsInTerrainLimits(originalPosition)).Returns(true);
-            terrainGrid.Setup(x => x.Explore(originalPosition, originalRobotDirection)).Returns(new GridPoint(1, 2));
+            terrainGrid.Setup(x => x.MoveFrom(originalPosition, originalRobotDirection)).Returns(new GridPoint(1, 2));
             robot = new Robot(terrainGrid.Object, originalPosition, originalRobotDirection);
 
             robot.MoveForward();
